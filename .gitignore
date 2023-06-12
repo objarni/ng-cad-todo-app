@@ -1,3 +1,8 @@
+# IDEA
+.idea/
+.vscode/
+.angular/cache
+
 # Logs
 logs
 *.log
