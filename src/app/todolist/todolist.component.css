@@ -1,0 +1,21 @@
+.todolist {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.todoitem {
+  display: flex;
+  padding: 10px 15px;
+  margin: 5px;
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+}
+.todoitem:nth-child(odd) {
+  background-color: lightgoldenrodyellow;
+}
+.todoitem:nth-child(even) {
+  background-color: lightcyan;
+}
+.todo-done {
+  text-decoration: line-through;
+}

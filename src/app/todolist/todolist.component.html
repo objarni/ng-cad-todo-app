@@ -1,0 +1,10 @@
+<div *ngFor="let item of todos; index as ix" class="todolist">
+  <div class="todoitem {{item.completed ? 'todo-done' : 'todo-notdone'}}">
+    <div (click)="onClick(ix)" class="content" style="width:100%; flex:5;">{{ item.content }}</div>
+    <button (click)="onRemove(ix)" class="delete" style="width:100%; flex:2;">Remove</button>
+  </div>
+</div>
+<div style="display: flex">
+  <textarea [(ngModel)]="newTodo"></textarea>
+  <button (click)="onAddClick()">Add</button>
+</div>
