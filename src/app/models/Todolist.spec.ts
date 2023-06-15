@@ -1,4 +1,4 @@
-import {clickAddCalc, clickRemoveCalc} from "./Todolist";
+import {clickAddCalc, clickItemCalc, clickRemoveCalc} from "./Todolist";
 
 describe("With a Todolist, you can", () => {
   it("add an items by clicking Add with a text", () => {
@@ -10,5 +10,9 @@ describe("With a Todolist, you can", () => {
     const newItems = clickRemoveCalc(initialItems.todos, 0)
     expect(newItems.length).toEqual(0);
   });
+  it("complete an item by clicking on it", () => {
+    const initialItems = clickAddCalc([], "buy milk")
+    const newItems = clickItemCalc(initialItems.todos, 0)
+    expect(newItems[0].completed).toEqual(true);
+  });
 });
-// clicking on item
